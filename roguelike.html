@@ -450,6 +450,9 @@
         if (cel.classList.length == 0) {
           cel.classList.add('wall')
         }
+        cel.addEventListener('click', () => {
+          console.log('Celula possui as classes ' + cel.classList)
+        })
       })
     </script>
 </body>
