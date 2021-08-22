@@ -447,11 +447,25 @@
       console.log(celulas.length)
       celulas.forEach((cel) => {
         console.log(cel.classList)
-        if (cel.classList.length == 0) {
-          cel.classList.add('wall')
-        }
+        // if (cel.classList.length == 0) {
+        //   cel.classList.add('wall')
+        // }
         cel.addEventListener('click', () => {
-          console.log('Celula possui as classes ' + cel.classList)
+          console.log('Celula possui a classe ' + cel.className)
+          switch(cel.className) {
+          case 'wall':
+            cel.className = ''
+            break;
+          case '':
+            cel.className = 'orc'
+            break;
+          case 'orc':
+            cel.className = 'treasure'
+            break;
+          case 'treasure':
+            cel.className = 'wall'
+        }
+        console.log('Celula possui a classe ' + cel.className)
         })
       })
     </script>
