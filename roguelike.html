@@ -439,8 +439,19 @@
       <td class="wall"></td>
       <td class="wall"></td>
       <td class="wall"></td>
-      <td class="wall"></td>
+      <td></td>
     </tr>
+
+    <script>
+      const celulas = document.querySelectorAll('td')
+      console.log(celulas.length)
+      celulas.forEach((cel) => {
+        console.log(cel.classList)
+        if (cel.classList.length == 0) {
+          cel.classList.add('wall')
+        }
+      })
+    </script>
 </body>
 
 </html>
